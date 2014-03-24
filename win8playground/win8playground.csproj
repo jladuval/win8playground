@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{bc310399-1141-4fb9-91ac-cff0bb45083a}</ProjectGuid>
+    <ProjectGuid>{BC310399-1141-4FB9-91AC-CFF0BB45083A}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>win8playground</RootNamespace>
@@ -14,9 +14,7 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    
     <PackageCertificateKeyFile>win8playground_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -110,9 +108,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CatEdit.xaml.cs">
+      <DependentUpon>CatEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\CatListModel.cs" />
+    <Compile Include="Models\CatModel.cs" />
     <Compile Include="SectionPage.xaml.cs">
       <DependentUpon>SectionPage.xaml</DependentUpon>
     </Compile>
@@ -131,13 +134,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="Common\ReadMe.txt" />
-    
     <None Include="win8playground_TemporaryKey.pfx" />
-    
     <PRIResource Include="Strings\en-US\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
-    <Content Include="DataModel\SampleData.json"/>
+    <Content Include="DataModel\SampleData.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -153,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="CatEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="HubPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
