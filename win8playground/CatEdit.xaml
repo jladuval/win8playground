@@ -61,8 +61,10 @@
                 <RowDefinition Height="154*"/>
                 <RowDefinition Height="417*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="CatText" Grid.Column="1" HorizontalAlignment="Left" Margin="116,76,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Cat.Name, Mode=TwoWay}" VerticalAlignment="Top" Height="69" Width="595" FontSize="30" TextChanged="TextBox_TextChanged" />
-            <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="158,10,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Cat.Name, Mode=OneWay}" VerticalAlignment="Top" Height="61" Width="364" FontSize="40"/>
+            <StackPanel Grid.Column="1" Margin="116,10,537,272" Orientation="Horizontal" Grid.Row="2" DataContext="{Binding Cat}">
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Name, Mode=OneWay}" VerticalAlignment="Top" Height="61" Width="364" FontSize="40"/>
+                <TextBox x:Name="CatText" HorizontalAlignment="Left" Margin="0,66,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top" Height="69" Width="595" FontSize="30" TextChanged="TextBox_TextChanged" />
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>
