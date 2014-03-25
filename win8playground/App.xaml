@@ -8,7 +8,14 @@
     <Application.Resources>
         <!-- Application-specific resources -->
 
-        <x:String x:Key="AppName">win8playground</x:String>
+        <ResourceDictionary>
+            <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>-->
+
+            <!-- Application-specific resources -->
+            <x:String x:Key="AppName">Cat App</x:String>
+        </ResourceDictionary>
 
     </Application.Resources>
 </Application>
